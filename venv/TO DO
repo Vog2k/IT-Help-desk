@@ -1,0 +1,107 @@
+Project Assessment
+Overview
+This project is an individual project where you will demonstrate your ability to develop a solution to a problem outlined below based on the client requirements provided.
+
+ 
+
+Assessment Conditions
+
+It is recommended that you spend 15 to 20 hours on this assessment.
+
+The course lecturer for this course will communicate the due dates for this assessment to you.
+
+You can access all course materials and any other resources you wish to use as you work on this assessment.
+
+The work you submit must be your own work.
+
+You can ask a lecturer to clarify the instructions and for advice, but they cannot assist you in completing the tasks required – you must carry out the tasks yourself!
+ 
+
+Success Criteria
+
+To be successful in this assessment you must obtain a minimum of 50% of the total available marks. The rubrics are in the marking form provided with this document. Please read them to make yourself familiar with the expectations for this project.
+
+You are allowed a maximum of two attempts. The maximum percentage to be awarded on a second assessment attempt is 50%.
+
+This project contributes to 50% of the final course grade.
+
+ 
+
+INSTRUCTIONS Overview of Tasks
+The tasks are not sequential: they can happen in parallel or iteratively.
+
+Part 1. Reflective journal Part 2. Solution development
+
+ 
+
+SCENARIO
+Client Requirements
+The client would like a ticketing system prototype developed. The help desk ticketing system should handle tickets from internal customers only. Tickets are requests for assistance from the help desk by staff members of the company.
+
+Tickets:
+
+There are two ways of submitting an internal ticket: either by providing staff ID, ticket creator name, contact email and the description of the issue or only by providing staff ID and the description of the issue
+
+If an internal ticket is submitted without ticket creator name and contact email specified, the system should automatically assign values for creator name and contact email as “Not specified”.
+
+Internal Tickets’ ticket number should be assigned automatically using the counter static field plus 2000.
+
+For your information, StaffID is made up of the employee’s name followed by the first letter of the employee’s surname.
+
+ 
+
+Responding to tickets:
+
+If the ticket’s description of the issue contains the words “Password Change”, the new password should be generated following the rule:
+o ThefirsttwocharactersofthestaffID,followedbythehexadecimalrepresentationofthe ticket number, followed by a hexadecimal representation of the first three characters of the timestamp.
+
+You may find the following link useful: How to convert between hexadecimal strings and numeric types (C# Programming Guide)
+
+There should be an option after the ticket has been submitted to respond to a ticket by providing a feedback response.
+ 
+
+Statistics:
+
+There should be a way to keep track of the number of tickets submitted, number of resolved tickets and number of open tickets, and a way to display those statistics to the console.
+
+If the staff member has submitted the “Password change” request, after the new password is generated and the ticket’s response has been updated, the ticket should close, with the number of closed tickets increased and the number of open tickets reduced by 1. Ticket’s status should be changed to “Closed”.
+
+Once a member of the IT department provides the response to a ticket, the ticket should close, with the number of closed tickets increased and the number of open tickets reduced by 1. Ticket’s status should be changed to “Closed”.
+
+There should be an option for the IT department to reopen the ticket. At this point the number of open tickets should be increased and the number of closed tickets should be reduced by 1. Ticket’s status should be changed to “Reopened”
+
+ 
+
+Displaying the ticket:
+There should be a way to display the ticket information:
+o ticketnumber,nameoftheticket’screator,staffID,emailaddress,descriptionoftheissue,
+response from the IT department and ticket status (open, closed or reopened). The output format is shown in the example on page 6.
+
+ 
+
+Technical Requirements
+The senior developer has provided you with the following technical requirements for the project.
+
+The Ticket class should contain common ticket information in the Ticket class.
+
+The Ticket class should also have methods allowing the IT team to respond to the tickets, specifically resolve, reopen and provide a response to the ticket.
+
+The object creation of Ticket type should be performed through the use of constructors.
+
+The Ticket class should contain a method for resolving password change requests. As well as calling the method that would generate the new password, it should set up a response for the ticket and change the ticket status to closed.
+
+There should be a method to print information for all the ticket objects (Hint: research and use List<Ticket>).
+
+The TicketStats class should contain information on ticket statistics. Variables for storing statistics on tickets created, tickets opened and tickets closed should be encapsulated and set to a default value of 0. There should also be a method, returning a string value that displays the statistics information.
+
+The PasswordGenerator class should have a static method that generates a password as per the client requirements, based on the ticketNumber and staffID parameters provided. This method should be called if the user’s ticket issue description contains the phrase “Password Change”.
+
+The main class, containing the Main method:
+
+o Createatleastoneinstanceofeachpossiblewayofcreatingtickets.Includeatleastone
+
+ticket with the request of “Password change”.
+o Aftertheticketsarecreated,displayticketstatistics.
+o Resolvesomeofthetickets,thendisplaytheticketinformationandticketstatistics.
+
+o Reopensomeoftheresolvedtickets,thendisplaytheticketinformationandticket statistics.
