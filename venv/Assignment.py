@@ -2,60 +2,68 @@ import random
 import uuid
 import datetime
 
-"""
-def Ticket():
-    pass
+def SignIn():
+    Start = print("Welcome")
+    status = input("Do you currently have an account ?\nPlease enter 'Y' for yes or 'N' for no: ")
+    if status == "y" + "Y": # Requires the user to enter Y or N
+        old_user() # If the user is old this should send them staright to entering their ID
+    else:
+        if status == "N" + "n": #If the user is new then this part should send them straight to the register page
+            Register()
 
-class Employee:
-
-   def __init__(self, first, last, id):
-        self.first = first
-        self.last = last
-        self.email = first + "." + last + "@whitecliffe"
-   def fullname(self):
-        return '{} {}'.format(self.first, self.last)
-   pass
-"""
-def main ():
+def Register():
 
     print()
-    first = input("Enter first name - :")
-    last = input("Enter last name - :")
-    email = first + "." + last + "@whitecliffe"
-    id = "15186146"
-    if first + last :
-        print("ID:" + first + last + id)
+    first_name = input("Enter first name - ")
+    print()
+    last_name = input("Enter last name - ")
+    print()
+
+    first_char = first_name[0]
+    last_char = last_name[0]
+    first_two = first_char + last_char
+    email = first_name + "." + last_name + "@whitecliffe"
+    ram_id = random.randint(1000000, 5000000) #Needs randomized number later
+    internal_id = first_two + str(ram_id)
+
+
+    if first_name + last_name == first_name + last_name:
+        print("Here is you're new ID")
+        print("ID:", internal_id)
+
     else:
-        print()
-        print("Please enter a valid name")
+        if first_name != []:
+            if last_name != []:
+                print("Error please enter you're name")
+        Register()
 
 
-"""
-class ID():
 
-    def i_D(self):
-        self.id = id
-
-ran_id = uuid.uuid4()
-print("Your new ID is :" + str(ran_id))
-input("Please copy & paste your code here")
-
-pass
+def old_user():
+    Sign_in = input("Please enter your ID# ")
+    if Sign_in == Sign_in: #NEEDS A LIST OF IDs
+        print("Welcome")
+    else:
+     if Sign_in != Sign_in: #NEEDS A LIST OF IDs
+         input("Error Please enter correct ID")
+    old_user()
 
 
-class lecturer(Employee):
 
 
-    Employee()
-    print(Employee.fullname(emp_1))
 
-ID = int(input("Please enter ID number here :"))
 
-print("1. Lost or misplaced device\n"
-      "2. Damaged property\n"
-      "3. New ID\n")
-print("Please choose an option")
-option = int(input())
 
-pass
-"""
+def main():
+    if SignIn() == True:
+        old_user()
+    else:
+        if SignIn() == False:
+            Register()
+
+
+
+
+
+main()
+
