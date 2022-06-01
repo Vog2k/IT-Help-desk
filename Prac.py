@@ -3,7 +3,7 @@ import random
 
 class Employee:  # Parent Class
 
-    def __init__(self):
+    def __init__(self, ):
         self.name = "no"
         self.ID()
 
@@ -21,4 +21,4 @@ class Ticket(Employee):  # Child Class
 Test = Ticket()
 print(Test.name, "Child class")
 print(Employee, "Parent class")
-print(Test.)
+

@@ -31,12 +31,26 @@ def Register():
     last_name = input("Enter last name - ")
     Space()
 
+    password = input("Please enter your new password: ")
+    Space()
+
+    first_char = first_name[0]
+    last_char = last_name[0]
+    full_name = first_name + " " + last_name
+    first_two = first_char + last_char
+    email = first_name + "." + last_name + "@whitecliffe"
+    ram_id = random.randint(1000000, 5000000)  # Needs randomized number later
+    internal_id = first_two + str(ram_id)
 
 
 
     if first_name + last_name == first_name + last_name:
+        print("Thank you for registering ", full_name)
         print("Here is you're new ID")
+        print("Work email is: ", email)
         print("ID:", internal_id)
+        print("Password: ", password)
+        print()
         SignIn()
 
     else:
@@ -45,13 +59,7 @@ def Register():
                 print("Error please enter you're name")
         Register()
 
-first_char = first_name[0]
-last_char = last_name[0]
-full_name = first_name + last_name
-first_two = first_char + last_char
-email = first_name + "." + last_name + "@whitecliffe"
-ram_id = random.randint(1000000, 5000000) #Needs randomized number later
-internal_id = first_two + str(ram_id)
+
 
 
 
@@ -69,6 +77,8 @@ def old_user():
 
 
 def home():
+    print("Login successful")
+
 
     print("Welcome\n")
 
@@ -132,18 +142,16 @@ def home():
 
 
 # Later on
-def SignIn_Password_reset(tkt_1):
+"""def SignIn_Password_reset(tkt_1):
 
-
-
-    if needed == internal_id:
+    if needed == :
         new_password
     else:
         print("Please enter a valid password")
         SignIn_Password_reset(tkt_1)
 
 needed = input("Please enter your ID or your name")
-new_password = input("Please enter a new password")
+new_password = input("Please enter a new password")"""
 
 def description(tkt_6):
     des = input("Please enter your situation")
