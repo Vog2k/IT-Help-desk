@@ -3,8 +3,9 @@
 # Start Date 30/5/22 7am
 
 import random
-import uuid
 import datetime
+from Ticket import Tickets
+
 # from Staff import work
 
 
@@ -74,8 +75,6 @@ def old_user():
          input("Error Please enter correct ID")
     old_user()
 
-
-
 def home():
     print("Login successful")
 
@@ -90,55 +89,32 @@ def home():
     print("6. Error")
 
     Space()
-    num = input("Please enter a number: ")
 
-    tkt_1 = "1"
-    tkt_2 = "2"
-    tkt_3 = "3"
-    tkt_4 = "4"
-    tkt_5 = "5"
-    tkt_6 = "6"
+    choice = input("Enter choice: ")
+
+    if choice == 1:
 
 
+    elif choice == 2:
 
-    if num == "1":
-        SignIn_Password_reset(tkt_1)
+
+    elif choice == 3:
+
+
+    elif choice == 4:
+
+
+    elif choice == 5:
+
+    elif choice == 6:
+        break
     else:
-        print("Error please enter a number")
-        home()
-
-    if tkt_2 == "2":
-        SignIn_Password_reset(tkt_1)
-    else:
-        print("Error please enter a number")
-        home()
-
-    if tkt_2 == "3":
-        SignIn_Password_reset(tkt_1)
-    else:
-        print("Error please enter a number")
-        home()
-
-    if tkt_2 == "4":
-        SignIn_Password_reset(tkt_1)
-    else:
-        print("Error please enter a number")
-        home()
-
-    if tkt_2 == "5":
-        SignIn_Password_reset(tkt_1)
-    else:
-        print("Error please enter a number")
-        home()
-
-    if tkt_2 == "6":
-        SignIn_Password_reset(tkt_1)
-    else:
-        print("Error please enter a number")
-        home()
+        print("Invalid input. Please enter number between 1-6 ")
+    print("Thank you for using the bike rental system.")
 
 
-
+tkt_1 = Tickets("Open", int(2000), )
+status, ticket_number, ticket_creator, staff_id, email, problem
 
 
 # Later on
