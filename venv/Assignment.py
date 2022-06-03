@@ -109,8 +109,7 @@ def home():
     elif choice == 6:
         break
     else:
-        print("Invalid input. Please enter number between 1-6 ")
-    print("Thank you for using the bike rental system.")
+
 
 
 tkt_1 = Tickets("Open", int(2000), )

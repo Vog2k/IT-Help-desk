@@ -10,6 +10,7 @@ class Tickets:
         self.staff_id = staff_id
         self.email = email
         self.problem = problem
+        # body of the constructor
 
     def Issue(self):
         print(self.status+"open")
@@ -19,3 +20,5 @@ class Tickets:
 
     def Ticket_Number(self):
         self.ticket_num = random.randint(1000000, 5000000)
+
+
